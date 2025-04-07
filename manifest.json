@@ -1,0 +1,35 @@
+{
+  "name": "Fifa Snipe Bot",
+  "version": "1.0",
+  "description": "",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["init.js"],
+      "css": ["/styles/fonts.css"]
+    }
+  ],
+  "action": {
+    "default_title": "Activate Bot"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "./assets/icons/16.png",
+    "32": "./assets/icons/32.png",
+    "48": "./assets/icons/48.png",
+    "64": "./assets/icons/64.png",
+    "128": "./assets/icons/128.png"
+  },
+  "permissions": ["storage", "scripting"],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzHCWhyhvw6foNakbCsGrZpdOffIqPF1k51cTEt814p4IH3ROw1XkP3P0Abn2P7SrV/jksfz0ofYy0OM4cb38NKKPcuezp87/EvXF0J3bHMLo1V1U/Fy9xDDWTndpQnZ5uQSDZ6ZsJRptUr5lRBTt0Zr2pReELTUSUO51Z+UVd53si4GOvNoI1shvJQXeZfSnwstrnydGRJj2tzv8J6Sk/Tt6tehQPVMZhbvcgdI2UOBaxkqX4tgmgnvfMvEjGKfV9kLudK4YOEzCX7y0NDsnA3jdVerXhs6xRAmb25Ws6/xQNujsrP0ruX6UTG3we/60KC3L0sAQliVh/bq9zogo+wIDAQAB",
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*", "assets/fonts/*", "content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}

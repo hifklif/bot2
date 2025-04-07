@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener((function(e,n,o){var t;console.log(e),"showBot"===e.command&&((t=document.createElement("script")).src=chrome.runtime.getURL("content.js"),document.body.appendChild(t))}));
